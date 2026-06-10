@@ -102,7 +102,14 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en'
+
+LANGUAGES = [
+    ('en', 'English'),
+    ('lv', 'Latvian'),
+]
+
+LANGUAGE_BIDI = True  # Set to True for RTL languages, False otherwise
 
 TIME_ZONE = 'UTC'
 
