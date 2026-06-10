@@ -1,4 +1,4 @@
-# Latvian translations for Django i18n Tutorial.
+# French translations for Django i18n Tutorial.
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
@@ -6,95 +6,97 @@ msgstr ""
 "POT-Creation-Date: 2026-06-10 23:12+0600\n"
 "PO-Revision-Date: 2026-06-10 23:00+0600\n"
 "Last-Translator: \n"
-"Language-Team: Latvian\n"
-"Language: lv\n"
+"Language-Team: French\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
-"2);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: .\templates\base.html:7
 msgid "Django i18n Tutorial"
-msgstr "Django i18n apmācība"
+msgstr "Tutoriel Django i18n"
 
 #: .\templates\base.html:22
 msgid "Features"
-msgstr "Funkcijas"
+msgstr "Fonctionnalités"
 
 #: .\templates\base.html:23 .\templates\home.html:87
 msgid "How it works"
-msgstr "Kā tas darbojas"
+msgstr "Comment ça fonctionne"
 
 #: .\templates\base.html:24
 msgid "Setup guide"
-msgstr "Iestatīšanas rokasgrāmata"
+msgstr "Guide d'installation"
 
 #: .\templates\base.html:40
 msgid "Choose your language"
-msgstr "Izvēlieties savu valodu"
+msgstr "Choisissez votre langue"
 
 #: .\templates\base.html:59
 msgid "Built with Django i18n — a hands-on tutorial project."
-msgstr "Veidots ar Django i18n — praktisks apmācību projekts."
+msgstr "Conçu avec Django i18n — un projet tutoriel pratique."
 
 #: .\templates\home.html:4
 msgid "Home"
-msgstr "Sākums"
+msgstr "Accueil"
 
 #: .\templates\home.html:10
 msgid "Django Internationalization"
-msgstr "Django internacionalizācija"
+msgstr "Internationalisation Django"
 
 #: .\templates\home.html:12
 msgid "Build apps that speak"
-msgstr "Veidojiet lietotnes, kas runā"
+msgstr "Créez des applications qui parlent"
 
 #: .\templates\home.html:12
 msgid "every language"
-msgstr "jebkurā valodā"
+msgstr "toutes les langues"
 
 #: .\templates\home.html:15
 msgid ""
 "Learn how Django's i18n framework translates your templates, detects user "
 "language, and switches locales instantly — just like production websites do."
 msgstr ""
-"Uzziniet, kā Django i18n ietvars tulko jūsu veidnes, nosaka lietotāja valodu "
-"un nekavējoties pārslēdz lokalizāciju — tāpat kā īstās mājaslapās."
+"Découvrez comment le framework i18n de Django traduit vos modèles, détecte la "
+"langue de l'utilisateur et bascule les locales instantanément — comme le font "
+"les sites web en production."
 
 #: .\templates\home.html:18
 msgid "Start the tutorial"
-msgstr "Sākt apmācību"
+msgstr "Commencer le tutoriel"
 
 #: .\templates\home.html:19
 msgid "Explore features"
-msgstr "Izpētīt funkcijas"
+msgstr "Explorer les fonctionnalités"
 
 #: .\templates\home.html:40
 msgid "Core concepts"
-msgstr "Pamatkoncepcijas"
+msgstr "Concepts fondamentaux"
 
 #: .\templates\home.html:41
 msgid "Everything you need for multilingual Django"
-msgstr "Viss nepieciešamais daudzvalodu Django projektam"
+msgstr "Tout ce dont vous avez besoin pour un Django multilingue"
 
 #: .\templates\home.html:43
 msgid ""
 "These are the building blocks behind the language switcher in the navbar "
 "above."
-msgstr "Šie ir pamatelementi aiz valodas pārslēdzēja navigācijas joslā augšā."
+msgstr ""
+"Voici les éléments fondamentaux derrière le sélecteur de langue dans la "
+"barre de navigation ci-dessus."
 
 #: .\templates\home.html:50
 msgid "gettext & trans tags"
-msgstr "gettext un trans tagi"
+msgstr "gettext et balises trans"
 
 #: .\templates\home.html:52
 msgid ""
 "Wrap strings in trans tags or _() so Django knows what to translate. "
 "Messages live in .po files per language."
 msgstr ""
-"Ietiniet virknes trans tagos vai _(), lai Django zinātu, ko tulkot. Ziņojumi "
-"glabājas .po failos katrai valodai."
+"Encadrez les chaînes avec des balises trans ou _() pour que Django sache quoi "
+"traduire. Les messages sont stockés dans des fichiers .po par langue."
 
 #: .\templates\home.html:58
 msgid "LocaleMiddleware"
@@ -105,248 +107,250 @@ msgid ""
 "Activates the correct language on every request using session, cookie, or "
 "Accept-Language header."
 msgstr ""
-"Aktivizē pareizo valodu katrā pieprasījumā, izmantojot sesiju, sīkdatni vai "
-"Accept-Language galveni."
+"Active la langue correcte à chaque requête en utilisant la session, un "
+"cookie ou l'en-tête Accept-Language."
 
 #: .\templates\home.html:66
 msgid "Instant language switch"
-msgstr "Tūlītēja valodas maiņa"
+msgstr "Changement de langue instantané"
 
 #: .\templates\home.html:68
 msgid ""
 "Select a language from the navbar — no submit button needed. The form auto-"
 "submits on change, just like real websites."
 msgstr ""
-"Izvēlieties valodu navigācijas joslā — pogas nav nepieciešamas. Forma "
-"automātiski iesniedzas, mainot izvēli, tāpat kā īstās mājaslapās."
+"Sélectionnez une langue dans la barre de navigation — aucun bouton de "
+"validation requis. Le formulaire s'envoie automatiquement lors du changement, "
+"comme sur les vrais sites web."
 
 #: .\templates\home.html:74
 msgid "Dynamic language list"
-msgstr "Dinamiska valodu saraksts"
+msgstr "Liste de langues dynamique"
 
 #: .\templates\home.html:76
 msgid ""
 "The navbar dropdown reads from LANGUAGES in settings.py. Add a new language "
 "there and it appears automatically — no template edits needed."
 msgstr ""
-"Navigācijas joslas izvēlnes nolaižamais saraksts nolasa LANGUAGES no "
-"settings.py. Pievienojiet tur jaunu valodu, un tā parādās automātiski — "
-"veidņu labojumi nav nepieciešami."
+"Le menu déroulant de la barre de navigation lit LANGUAGES dans settings.py. "
+"Ajoutez-y une nouvelle langue et elle apparaît automatiquement — aucune "
+"modification de modèle nécessaire."
 
 #: .\templates\home.html:86
 msgid "Workflow"
-msgstr "Darbplūsma"
+msgstr "Flux de travail"
 
 #: .\templates\home.html:89
 msgid "Follow these four steps to add a new language to any Django project."
 msgstr ""
-"Izpildiet šos četrus soļus, lai jebkuram Django projektam pievienotu jaunu "
-"valodu."
+"Suivez ces quatre étapes pour ajouter une nouvelle langue à n'importe quel "
+"projet Django."
 
 #: .\templates\home.html:95
 msgid "Mark strings"
-msgstr "Atzīmējiet virknes"
+msgstr "Marquer les chaînes"
 
 #: .\templates\home.html:96
 msgid "Use trans tags in templates and gettext in Python views."
-msgstr "Izmantojiet trans tagus veidnēs un gettext Python skatos."
+msgstr "Utilisez les balises trans dans les modèles et gettext dans les vues Python."
 
 #: .\templates\home.html:99
 msgid "Extract messages"
-msgstr "Izvelciet ziņojumus"
+msgstr "Extraire les messages"
 
 #: .\templates\home.html:100
 msgid "Run makemessages to generate .po translation files."
-msgstr "Palaidiet makemessages, lai ģenerētu .po tulkošanas failus."
+msgstr "Exécutez makemessages pour générer les fichiers de traduction .po."
 
 #: .\templates\home.html:103
 msgid "Translate & compile"
-msgstr "Tulkojiet un kompilējiet"
+msgstr "Traduire et compiler"
 
 #: .\templates\home.html:104
 msgid "Fill in msgstr values, then run compilemessages."
-msgstr "Aizpildiet msgstr vērtības, pēc tam palaidiet compilemessages."
+msgstr "Remplissez les valeurs msgstr, puis exécutez compilemessages."
 
 #: .\templates\home.html:107
 msgid "Switch language"
-msgstr "Pārslēdziet valodu"
+msgstr "Changer de langue"
 
 #: .\templates\home.html:108
 msgid "Use set_language view — select from the navbar to see it live."
 msgstr ""
-"Izmantojiet set_language skatu — izvēlieties navigācijas joslā, lai redzētu "
-"to darbībā."
+"Utilisez la vue set_language — sélectionnez dans la barre de navigation pour "
+"voir le résultat en direct."
 
 #: .\templates\home.html:114
 msgid ""
 "Try it now — pick any language from the navbar and watch this entire page "
 "translate instantly."
 msgstr ""
-"Izmēģiniet tagad — izvēlieties jebkuru valodu navigācijas joslā un vērojiet, "
-"kā visa lapa nekavējoties tiek tulkota."
+"Essayez maintenant — choisissez une langue dans la barre de navigation et "
+"regardez cette page entière se traduire instantanément."
 
 #: .\templates\home.html:123
 msgid "Step-by-step"
-msgstr "Soli pa solim"
+msgstr "Étape par étape"
 
 #: .\templates\home.html:124
 msgid "Full setup guide"
-msgstr "Pilna iestatīšanas rokasgrāmata"
+msgstr "Guide d'installation complet"
 
 #: .\templates\home.html:126
 msgid ""
 "Follow this guide from scratch to build the exact multilingual setup you are "
 "using right now. Each step includes the code you need."
 msgstr ""
-"Sekojiet šai rokasgrāmatai no paša sākuma, lai izveidotu tieši to "
-"daudzvalodu konfigurāciju, ko izmantojat tagad. Katrā solī ir iekļauts "
-"nepieciešamais kods."
+"Suivez ce guide depuis le début pour construire la configuration multilingue "
+"exacte que vous utilisez actuellement. Chaque étape inclut le code dont vous "
+"avez besoin."
 
 #: .\templates\home.html:135
 msgid "Create the Django project"
-msgstr "Izveidojiet Django projektu"
+msgstr "Créer le projet Django"
 
 #: .\templates\home.html:136
 msgid ""
 "Start with a fresh virtual environment and install Django. Then create the "
 "project and your app."
 msgstr ""
-"Sāciet ar jaunu virtuālo vidi un instalējiet Django. Pēc tam izveidojiet "
-"projektu un savu lietotni."
+"Commencez par un nouvel environnement virtuel et installez Django. Créez "
+"ensuite le projet et votre application."
 
 #: .\templates\home.html:154
 msgid "Configure internationalization in settings.py"
-msgstr "Konfigurējiet internacionalizāciju settings.py"
+msgstr "Configurer l'internationalisation dans settings.py"
 
 #: .\templates\home.html:155
 msgid ""
 "Enable i18n, define supported languages, set the locale path, and register "
 "your app."
 msgstr ""
-"Iespējojiet i18n, definējiet atbalstītās valodas, iestatiet lokalizācijas "
-"ceļu un reģistrējiet savu lietotni."
+"Activez i18n, définissez les langues prises en charge, configurez le chemin "
+"des locales et enregistrez votre application."
 
 #: .\templates\home.html:188
 msgid "Add the i18n context processor"
-msgstr "Pievienojiet i18n konteksta apstrādātāju"
+msgstr "Ajouter le processeur de contexte i18n"
 
 #: .\templates\home.html:189
 msgid ""
 "This makes LANGUAGES and LANGUAGE_CODE available in every template — "
 "required for the dynamic dropdown."
 msgstr ""
-"Tas padara LANGUAGES un LANGUAGE_CODE pieejamus katrā veidnē — nepieciešams "
-"dinamiskajai izvēlnes nolaižamajam sarakstam."
+"Cela rend LANGUAGES et LANGUAGE_CODE disponibles dans chaque modèle — "
+"nécessaire pour le menu déroulant dynamique."
 
 #: .\templates\home.html:200
 msgid "Wire up the language-switch URL"
-msgstr "Pievienojiet valodas maiņas URL"
+msgstr "Configurer l'URL de changement de langue"
 
 #: .\templates\home.html:201
 msgid ""
 "Django ships a built-in set_language view. Include it in your root urls.py."
 msgstr ""
-"Django nodrošina iebūvētu set_language skatu. Iekļaujiet to savā galvenajā "
-"urls.py."
+"Django fournit une vue set_language intégrée. Incluez-la dans votre urls.py "
+"racine."
 
 #: .\templates\home.html:216
 msgid "Mark strings for translation"
-msgstr "Atzīmējiet virknes tulkošanai"
+msgstr "Marquer les chaînes pour la traduction"
 
 #: .\templates\home.html:217
 msgid ""
 "In templates use the trans tag. In Python views use gettext. Only marked "
 "strings get extracted."
 msgstr ""
-"Veidnēs izmantojiet trans tagu. Python skatos izmantojiet gettext. Tiek "
-"izvilktas tikai atzīmētās virknes."
+"Dans les modèles, utilisez la balise trans. Dans les vues Python, utilisez "
+"gettext. Seules les chaînes marquées sont extraites."
 
 #: .\templates\home.html:232
 msgid "Build the dynamic language switcher"
-msgstr "Izveidojiet dinamisko valodas pārslēdzēju"
+msgstr "Construire le sélecteur de langue dynamique"
 
 #: .\templates\home.html:233
 msgid ""
 "Loop over LANGUAGES from settings — when you add a language there, the "
 "dropdown updates automatically."
 msgstr ""
-"Ciklojiet cauri LANGUAGES no iestatījumiem — kad tur pievienojat valodu, "
-"izvēlnes nolaižamais saraksts atjauninās automātiski."
+"Parcourez LANGUAGES depuis les paramètres — lorsque vous y ajoutez une "
+"langue, le menu déroulant se met à jour automatiquement."
 
 #: .\templates\home.html:257
 msgid "Extract and compile translation files"
-msgstr "Izvelciet un kompilējiet tulkošanas failus"
+msgstr "Extraire et compiler les fichiers de traduction"
 
 #: .\templates\home.html:258
 msgid ""
 "Run makemessages for each language, fill in translations in the .po files, "
 "then compile to .mo binaries."
 msgstr ""
-"Palaidiet makemessages katrai valodai, aizpildiet tulkojumus .po failos, "
-"pēc tam kompilējiet .mo binārajos failos."
+"Exécutez makemessages pour chaque langue, remplissez les traductions dans "
+"les fichiers .po, puis compilez en binaires .mo."
 
 #: .\templates\home.html:269
 msgid "Note"
-msgstr "Piezīme"
+msgstr "Remarque"
 
 #: .\templates\home.html:270
 msgid ""
 "On Windows you need GNU gettext tools installed. Download from gnuwin32 or "
 "use WSL."
 msgstr ""
-"Windows sistēmā jums jābūt instalētiem GNU gettext rīkiem. Lejupielādējiet no "
-"gnuwin32 vai izmantojiet WSL."
+"Sous Windows, vous devez installer les outils GNU gettext. Téléchargez-les "
+"depuis gnuwin32 ou utilisez WSL."
 
 #: .\templates\home.html:279
 msgid "Add a new language in the future"
-msgstr "Nākotnē pievienojiet jaunu valodu"
+msgstr "Ajouter une nouvelle langue à l'avenir"
 
 #: .\templates\home.html:280
 msgid ""
 "Only three things are needed — no template changes required thanks to the "
 "dynamic dropdown."
 msgstr ""
-"Nepieciešamas tikai trīs lietas — veidņu izmaiņas nav vajadzīgas, pateicoties "
-"dinamiskajam izvēlnes nolaižamajam sarakstam."
+"Seulement trois actions sont nécessaires — aucune modification de modèle "
+"requise grâce au menu déroulant dynamique."
 
 #: .\templates\home.html:300
 msgid "Understand the request flow"
-msgstr "Izprotiet pieprasījuma plūsmu"
+msgstr "Comprendre le flux de requête"
 
 #: .\templates\home.html:301
 msgid "When a user picks a language, this is what happens behind the scenes."
-msgstr "Kad lietotājs izvēlas valodu, aizkulisēs notiek šādi."
+msgstr ""
+"Lorsqu'un utilisateur choisit une langue, voici ce qui se passe en coulisses."
 
 #: .\templates\home.html:303
 msgid "User selects a language → form POSTs to /i18n/setlang/"
-msgstr "Lietotājs izvēlas valodu → forma nosūta POST uz /i18n/setlang/"
+msgstr "L'utilisateur sélectionne une langue → le formulaire envoie un POST vers /i18n/setlang/"
 
 #: .\templates\home.html:304
 msgid "set_language saves the choice in session/cookie"
-msgstr "set_language saglabā izvēli sesijā/sīkdatnē"
+msgstr "set_language enregistre le choix dans la session/cookie"
 
 #: .\templates\home.html:305
 msgid "Browser redirects back to the same page (next field)"
-msgstr "Pārlūkprogramma novirza atpakaļ uz to pašu lapu (next lauks)"
+msgstr "Le navigateur redirige vers la même page (champ next)"
 
 #: .\templates\home.html:306
 msgid "LocaleMiddleware reads the saved language on the next request"
-msgstr "LocaleMiddleware nolasa saglabāto valodu nākamajā pieprasījumā"
+msgstr "LocaleMiddleware lit la langue enregistrée lors de la requête suivante"
 
 #: .\templates\home.html:307
 msgid "trans tags resolve strings from the matching .mo file"
-msgstr "trans tagi atrisina virknes no atbilstošā .mo faila"
+msgstr "Les balises trans résolvent les chaînes depuis le fichier .mo correspondant"
 
 #: .\templates\home.html:308
 msgid "User sees the fully translated page"
-msgstr "Lietotājs redz pilnībā tulkoto lapu"
+msgstr "L'utilisateur voit la page entièrement traduite"
 
 #: .\templates\home.html:315
 msgid ""
 "The complete guide is also available in README.md in the project repository."
 msgstr ""
-"Pilna rokasgrāmata ir pieejama arī README.md projekta repozitorijā."
+"Le guide complet est également disponible dans README.md du dépôt du projet."
 
 #: .\templates\home.html:316
 msgid "Back to features"
-msgstr "Atpakaļ uz funkcijām"
+msgstr "Retour aux fonctionnalités"

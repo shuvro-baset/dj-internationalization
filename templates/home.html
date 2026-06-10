@@ -1,8 +1,320 @@
 {% extends 'base.html' %}
 {% load i18n %}
 
-{% block title %}Home Page{% endblock %}
+{% block title %}{% trans "Home" %}{% endblock %}
 
 {% block content %}
-<h2>{% trans "Hello, world!" %}</h2>
+<section class="hero">
+  <div class="hero__inner">
+    <div>
+      <div class="hero__badge">✦ {% trans "Django Internationalization" %}</div>
+      <h1 class="hero__title">
+        {% trans "Build apps that speak" %} <span>{% trans "every language" %}</span>
+      </h1>
+      <p class="hero__subtitle">
+        {% trans "Learn how Django's i18n framework translates your templates, detects user language, and switches locales instantly — just like production websites do." %}
+      </p>
+      <div class="hero__cta">
+        <a href="#guide" class="btn btn--primary">{% trans "Start the tutorial" %}</a>
+        <a href="#features" class="btn btn--ghost">{% trans "Explore features" %}</a>
+      </div>
+    </div>
+
+    <div class="hero__card">
+      <div class="hero__card-header">
+        <div class="hero__card-dots"><span></span><span></span><span></span></div>
+        settings.py
+      </div>
+      <pre class="code-block"><span class="kw">LANGUAGES</span> = [
+    (<span class="str">'en'</span>, <span class="str">'English'</span>),
+    (<span class="str">'lv'</span>, <span class="str">'Latvian'</span>),
+    (<span class="str">'fr'</span>, <span class="str">'French'</span>),
+]</pre>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="features">
+  <div class="section__inner">
+    <div class="section__header">
+      <p class="section__label">{% trans "Core concepts" %}</p>
+      <h2 class="section__title">{% trans "Everything you need for multilingual Django" %}</h2>
+      <p class="section__desc">
+        {% trans "These are the building blocks behind the language switcher in the navbar above." %}
+      </p>
+    </div>
+
+    <div class="features">
+      <article class="feature-card">
+        <div class="feature-card__icon feature-card__icon--purple">🔤</div>
+        <h3 class="feature-card__title">{% trans "gettext & trans tags" %}</h3>
+        <p class="feature-card__text">
+          {% trans "Wrap strings in trans tags or _() so Django knows what to translate. Messages live in .po files per language." %}
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-card__icon feature-card__icon--cyan">⚙️</div>
+        <h3 class="feature-card__title">{% trans "LocaleMiddleware" %}</h3>
+        <p class="feature-card__text">
+          {% trans "Activates the correct language on every request using session, cookie, or Accept-Language header." %}
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-card__icon feature-card__icon--green">🌍</div>
+        <h3 class="feature-card__title">{% trans "Instant language switch" %}</h3>
+        <p class="feature-card__text">
+          {% trans "Select a language from the navbar — no submit button needed. The form auto-submits on change, just like real websites." %}
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <div class="feature-card__icon feature-card__icon--amber">🔄</div>
+        <h3 class="feature-card__title">{% trans "Dynamic language list" %}</h3>
+        <p class="feature-card__text">
+          {% trans "The navbar dropdown reads from LANGUAGES in settings.py. Add a new language there and it appears automatically — no template edits needed." %}
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how-it-works">
+  <div class="section__inner">
+    <div class="section__header">
+      <p class="section__label">{% trans "Workflow" %}</p>
+      <h2 class="section__title">{% trans "How it works" %}</h2>
+      <p class="section__desc">
+        {% trans "Follow these four steps to add a new language to any Django project." %}
+      </p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <h3 class="step__title">{% trans "Mark strings" %}</h3>
+        <p class="step__text">{% trans "Use trans tags in templates and gettext in Python views." %}</p>
+      </div>
+      <div class="step">
+        <h3 class="step__title">{% trans "Extract messages" %}</h3>
+        <p class="step__text">{% trans "Run makemessages to generate .po translation files." %}</p>
+      </div>
+      <div class="step">
+        <h3 class="step__title">{% trans "Translate & compile" %}</h3>
+        <p class="step__text">{% trans "Fill in msgstr values, then run compilemessages." %}</p>
+      </div>
+      <div class="step">
+        <h3 class="step__title">{% trans "Switch language" %}</h3>
+        <p class="step__text">{% trans "Use set_language view — select from the navbar to see it live." %}</p>
+      </div>
+    </div>
+
+    <div class="demo-banner">
+      <p class="demo-banner__text">
+        {% trans "Try it now — pick any language from the navbar and watch this entire page translate instantly." %}
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="guide">
+  <div class="section__inner">
+    <div class="section__header">
+      <p class="section__label">{% trans "Step-by-step" %}</p>
+      <h2 class="section__title">{% trans "Full setup guide" %}</h2>
+      <p class="section__desc">
+        {% trans "Follow this guide from scratch to build the exact multilingual setup you are using right now. Each step includes the code you need." %}
+      </p>
+    </div>
+
+    <div class="guide">
+      <!-- Step 1 -->
+      <article class="guide-step">
+        <div class="guide-step__number">01</div>
+        <div class="guide-step__body">
+          <h3 class="guide-step__title">{% trans "Create the Django project" %}</h3>
+          <p class="guide-step__text">{% trans "Start with a fresh virtual environment and install Django. Then create the project and your app." %}</p>
+          <pre class="code-block code-block--guide"><span class="cm"># Create virtual environment</span>
+python -m venv venv
+venv\Scripts\activate        <span class="cm"># Windows</span>
+<span class="cm"># source venv/bin/activate  # macOS/Linux</span>
+
+pip install django
+
+<span class="cm"># Create project and app</span>
+django-admin startproject myproject .
+python manage.py startapp myapp</pre>
+        </div>
+      </article>
+
+      <!-- Step 2 -->
+      <article class="guide-step">
+        <div class="guide-step__number">02</div>
+        <div class="guide-step__body">
+          <h3 class="guide-step__title">{% trans "Configure internationalization in settings.py" %}</h3>
+          <p class="guide-step__text">{% trans "Enable i18n, define supported languages, set the locale path, and register your app." %}</p>
+          <pre class="code-block code-block--guide"><span class="cm"># settings.py</span>
+
+INSTALLED_APPS = [
+    ...
+    <span class="str">'myapp'</span>,
+]
+
+MIDDLEWARE = [
+    <span class="str">'django.middleware.security.SecurityMiddleware'</span>,
+    <span class="str">'django.contrib.sessions.middleware.SessionMiddleware'</span>,
+    <span class="str">'django.middleware.locale.LocaleMiddleware'</span>,  <span class="cm"># must be after SessionMiddleware</span>
+    <span class="str">'django.middleware.common.CommonMiddleware'</span>,
+    ...
+]
+
+LANGUAGE_CODE = <span class="str">'en'</span>
+USE_I18N = <span class="kw">True</span>
+
+LANGUAGES = [
+    (<span class="str">'en'</span>, <span class="str">'English'</span>),
+    (<span class="str">'lv'</span>, <span class="str">'Latvian'</span>),
+    (<span class="str">'fr'</span>, <span class="str">'French'</span>),
+]
+
+LOCALE_PATHS = [BASE_DIR / <span class="str">'myapp/locale'</span>]</pre>
+        </div>
+      </article>
+
+      <!-- Step 3 -->
+      <article class="guide-step">
+        <div class="guide-step__number">03</div>
+        <div class="guide-step__body">
+          <h3 class="guide-step__title">{% trans "Add the i18n context processor" %}</h3>
+          <p class="guide-step__text">{% trans "This makes LANGUAGES and LANGUAGE_CODE available in every template — required for the dynamic dropdown." %}</p>
+          <pre class="code-block code-block--guide"><span class="cm"># settings.py → TEMPLATES → OPTIONS → context_processors</span>
+
+<span class="str">'django.template.context_processors.i18n'</span>,</pre>
+        </div>
+      </article>
+
+      <!-- Step 4 -->
+      <article class="guide-step">
+        <div class="guide-step__number">04</div>
+        <div class="guide-step__body">
+          <h3 class="guide-step__title">{% trans "Wire up the language-switch URL" %}</h3>
+          <p class="guide-step__text">{% trans "Django ships a built-in set_language view. Include it in your root urls.py." %}</p>
+          <pre class="code-block code-block--guide"><span class="cm"># urls.py (project root)</span>
+<span class="kw">from</span> django.urls <span class="kw">import</span> path, include
+
+urlpatterns = [
+    path(<span class="str">'i18n/'</span>, include(<span class="str">'django.conf.urls.i18n'</span>)),
+    path(<span class="str">''</span>, include(<span class="str">'myapp.urls'</span>)),
+]</pre>
+        </div>
+      </article>
+
+      <!-- Step 5 -->
+      <article class="guide-step">
+        <div class="guide-step__number">05</div>
+        <div class="guide-step__body">
+          <h3 class="guide-step__title">{% trans "Mark strings for translation" %}</h3>
+          <p class="guide-step__text">{% trans "In templates use the trans tag. In Python views use gettext. Only marked strings get extracted." %}</p>
+          <pre class="code-block code-block--guide"><span class="cm">{# template.html #}</span>
+{% verbatim %}{% load i18n %}{% endverbatim %}
+&lt;h1&gt;{% verbatim %}{% trans "Welcome to our site" %}{% endverbatim %}&lt;/h1&gt;
+
+<span class="cm"># views.py</span>
+<span class="kw">from</span> django.utils.translation <span class="kw">import</span> gettext <span class="kw">as</span> _
+message = <span class="fn">_</span>(<span class="str">"Hello, world!"</span>)</pre>
+        </div>
+      </article>
+
+      <!-- Step 6 -->
+      <article class="guide-step">
+        <div class="guide-step__number">06</div>
+        <div class="guide-step__body">
+          <h3 class="guide-step__title">{% trans "Build the dynamic language switcher" %}</h3>
+          <p class="guide-step__text">{% trans "Loop over LANGUAGES from settings — when you add a language there, the dropdown updates automatically." %}</p>
+          <pre class="code-block code-block--guide"><span class="cm">{# base.html navbar #}</span>
+{% verbatim %}{% load i18n %}{% endverbatim %}
+
+&lt;form method=<span class="str">"post"</span> action=<span class="str">"{% verbatim %}{% url 'set_language' %}{% endverbatim %}"&gt;
+  {% verbatim %}{% csrf_token %}{% endverbatim %}
+  &lt;input name=<span class="str">"next"</span> type=<span class="str">"hidden"</span> value=<span class="str">"{% verbatim %}{{ request.get_full_path }}{% endverbatim %}"&gt;
+
+  {% verbatim %}{% get_language_info_list for LANGUAGES as languages %}{% endverbatim %}
+  &lt;select name=<span class="str">"language"</span> onchange=<span class="str">"this.form.submit()"</span>&gt;
+    {% verbatim %}{% for language in languages %}{% endverbatim %}
+    &lt;option value=<span class="str">"{% verbatim %}{{ language.code }}{% endverbatim %}"&gt;
+      {% verbatim %}{{ language.name_local }}{% endverbatim %}
+    &lt;/option&gt;
+    {% verbatim %}{% endfor %}{% endverbatim %}
+  &lt;/select&gt;
+&lt;/form&gt;</pre>
+        </div>
+      </article>
+
+      <!-- Step 7 -->
+      <article class="guide-step">
+        <div class="guide-step__number">07</div>
+        <div class="guide-step__body">
+          <h3 class="guide-step__title">{% trans "Extract and compile translation files" %}</h3>
+          <p class="guide-step__text">{% trans "Run makemessages for each language, fill in translations in the .po files, then compile to .mo binaries." %}</p>
+          <pre class="code-block code-block--guide"><span class="cm"># Extract strings for each language</span>
+python manage.py makemessages -l lv
+python manage.py makemessages -l fr
+
+<span class="cm"># Edit: myapp/locale/lv/LC_MESSAGES/django.po</span>
+<span class="cm"># Edit: myapp/locale/fr/LC_MESSAGES/django.po</span>
+
+<span class="cm"># Compile .po → .mo (required for translations to work)</span>
+python manage.py compilemessages</pre>
+          <div class="guide-step__note">
+            <strong>{% trans "Note" %}:</strong>
+            {% trans "On Windows you need GNU gettext tools installed. Download from gnuwin32 or use WSL." %}
+          </div>
+        </div>
+      </article>
+
+      <!-- Step 8 -->
+      <article class="guide-step">
+        <div class="guide-step__number">08</div>
+        <div class="guide-step__body">
+          <h3 class="guide-step__title">{% trans "Add a new language in the future" %}</h3>
+          <p class="guide-step__text">{% trans "Only three things are needed — no template changes required thanks to the dynamic dropdown." %}</p>
+          <pre class="code-block code-block--guide"><span class="cm"># 1. Add to settings.py</span>
+LANGUAGES = [
+    ...
+    (<span class="str">'de'</span>, <span class="str">'German'</span>),   <span class="cm"># new language</span>
+]
+
+<span class="cm"># 2. Extract & translate</span>
+python manage.py makemessages -l de
+<span class="cm"># edit locale/de/LC_MESSAGES/django.po</span>
+python manage.py compilemessages
+
+<span class="cm"># 3. Done — German appears in the navbar automatically</span></pre>
+        </div>
+      </article>
+
+      <!-- Step 9 -->
+      <article class="guide-step">
+        <div class="guide-step__number">09</div>
+        <div class="guide-step__body">
+          <h3 class="guide-step__title">{% trans "Understand the request flow" %}</h3>
+          <p class="guide-step__text">{% trans "When a user picks a language, this is what happens behind the scenes." %}</p>
+          <ol class="guide-step__list">
+            <li>{% trans "User selects a language → form POSTs to /i18n/setlang/" %}</li>
+            <li>{% trans "set_language saves the choice in session/cookie" %}</li>
+            <li>{% trans "Browser redirects back to the same page (next field)" %}</li>
+            <li>{% trans "LocaleMiddleware reads the saved language on the next request" %}</li>
+            <li>{% trans "trans tags resolve strings from the matching .mo file" %}</li>
+            <li>{% trans "User sees the fully translated page" %}</li>
+          </ol>
+        </div>
+      </article>
+    </div>
+
+    <div class="guide-footer">
+      <p>{% trans "The complete guide is also available in README.md in the project repository." %}</p>
+      <a href="#features" class="btn btn--ghost">{% trans "Back to features" %}</a>
+    </div>
+  </div>
+</section>
 {% endblock %}
