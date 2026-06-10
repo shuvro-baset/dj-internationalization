@@ -1,11 +1,8 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Django App</title>
-</head>
+<!-- head ... -->
 
 <body>
   <header>
@@ -14,19 +11,19 @@
       {% block language_switcher %}
       <form method="post" action="{% url 'set_language' %}">
         {% csrf_token %}
-        <label for="language-select">Choose your language:</label>
+        <label for="language-select">{% trans "Choose your language" %}:</label>
+        {% get_current_language as current_language %}
         <select id="language-select" name="language">
-          <option value="en">English</option>
-          <option value="lv">Latvian</option>
+          <option value="en" {% if current_language == "en" %}selected{% endif %}>English</option>
+          <option value="lv" {% if current_language == "lv" %}selected{% endif %}>Latvian</option>
         </select>
-        <button type="submit">Switch</button>
+        <button type="submit">{% trans "Switch" %}</button>
       </form>
       {% endblock %}
     </nav>
   </header>
   <main>
     {% block content %}
-    <p>{{ message }}</p>
     {% endblock %}
   </main>
 </body>

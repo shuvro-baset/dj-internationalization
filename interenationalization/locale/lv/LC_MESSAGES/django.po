@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-10 20:41+0600\n"
+"POT-Creation-Date: 2026-06-10 20:55+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-#: .\interenationalization\views.py:9
+
+#: .\templates\base.html:14
+msgid "Choose your language"
+msgstr "Izvēlieties savu valodu"
+
+#: .\templates\base.html:20
+msgid "Switch"
+msgstr "Pārslēgt"
+
+#: .\templates\home.html:7
 msgid "Hello, world!"
 msgstr "Sveika, pasaule!"
